@@ -1,0 +1,267 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+}
+.menu{
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    background-color: rgba(47, 47, 58, 0.9); 
+}
+.logo{
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+}
+.logo_list{
+    display:flex ;
+    list-style: none;
+    width: 80%;
+  padding: 20px;
+}
+.logo_list li{
+    display: flex;
+   padding: 10px 30px;
+}
+.list_item:hover,.list_item.active{
+    background-color: rgb(224, 71, 15);
+    border-radius: 20px; 
+    cursor: pointer;
+}
+#item{
+    position: relative;
+}
+.drop_list li,.drop_list2 li{
+    color: black;
+}
+.drop_list li:hover,.drop_list2 li:hover{
+    color: rgb(224, 71, 15) ;
+}
+.drop_list{
+    display: none;
+position: absolute;
+top: 100%;
+left: 0px;
+ padding: 0px; 
+ width: 100%;
+border: 1px solid black;
+width: 180px;
+z-index: 1000;
+border-radius: 10px;
+background-color: white;
+}
+.drop_list2{
+    display: none;
+    position: absolute;
+    right: 100%;
+     padding: 10px; 
+    border: 1px solid black;
+    width: 220px;
+    z-index: 1000;
+    border-radius: 10px;
+    background-color: white;
+}
+#item:hover .drop_list,#deepdrop:hover .drop_list2,
+#deepdrop:active .drop_list2,#deepdrop:focus .drop_list2
+  {
+    display: block;
+}
+.first_part{
+    background-color: rgb(47, 47, 58);
+    color:white;
+}
+
+
+@keyframes fadeInUp{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+     to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+ @keyframes fadeInDown {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+
+.section h1{
+opacity: 0;
+animation: fadeInDown 1s ease-in-out forwards;
+} 
+.section p,.section button{
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+.section{
+    display:grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 400px;
+    padding: 0px 90px;
+    color:white;
+}
+.section span{
+    text-decoration: underline;
+}
+.section button{
+    width: 120px;
+    height: 40px;
+    border: 1px solid   rgb(224, 71, 15);
+    border-radius: 20px;
+    background-color: transparent;
+    color:white;
+}
+.section button:hover{
+    background-color: rgb(224, 71, 15) ;
+}
+.section2 li{
+    display: flex;
+    width: 250px;
+    height: 100px;
+    border: 1px solid gray;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px ;
+}
+.section2 li:hover{
+    border: 1px solid rgb(224, 71, 15);
+    cursor: pointer;
+}
+.section2 li:hover i {
+    color: rgb(224, 71, 15) ;
+}
+.section2 li.active{
+    background-color:  rgb(224, 71, 15);
+    color:white;
+}
+.section2 li.active i{
+    color: white;
+}
+.section2 {
+   display: grid;
+   grid-template-columns: repeat(4,auto);
+   justify-content: center;
+   align-items: center;
+  padding: 50px;
+  gap: 60px;
+   
+   
+}
+
+.container2,.upper-slider,.slider,.paypal-part,.accordion,.upper-contact,.contact-part{
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .container2.visible,.upper-slider.visible,.slider.visible,
+  .paypal-part.visible,.accordion.visible,.upper-contact.visible,.contact-part.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .accordion-button:active,.accordion-button:focus{
+    color: rgb(224, 71, 15);
+  }
+  
+
+.container2 .section3{
+    display: none;
+}
+.container2 .section3.active{
+    display: block;
+}
+
+.section3 img{
+    width: 50%;
+    height: 80%;
+padding-left: 40px;
+}
+.part1{
+    width: 50%;
+}
+.card-item{
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.slider{
+    padding: 50px;
+}
+.card-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.card-item i{
+    color:  rgb(224, 71, 15);
+}
+.contact-part{
+    display: flex;
+    padding: 50px;
+}
+.part {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(224, 71, 15,0.2) ;
+    text-align: center;
+    color:  rgb(224, 71, 15);
+    padding: 8px;
+}
+.last-part{
+    display: flex;
+   
+}
+.last-part:hover i,.last-part:hover .part{
+    background-color:  rgb(224, 71, 15);
+    color: white;
+}
+.right-part{
+    width: 35%;
+   
+}
+.upper-contact,.upper-slider,.paypal-part{
+    padding: 50px;
+}
+.left-part{
+width: 65%;
+
+}
+.left-part button{
+    width: 200px;
+    height: 40px;
+    background-color:  rgb(224, 71, 15);
+   border-radius: 20px;
+   color: white;
+}
+ .left-part button:hover{
+    background-color:  rgba(224, 71, 15,0.9);
+    color: white;
+
+} 
+
+input:focus, textarea:focus {
+    box-shadow: none;
+    outline: none;
+    border-color:rgb(224, 71, 15) !important ;
+    box-shadow:rgba(224, 71, 15,0.5)  !important;
+}
